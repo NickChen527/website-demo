@@ -21,6 +21,20 @@
         width: auto;
         object-fit: cover;
       }
+      .pseudo-search {
+        border: 2px solid #ccc;
+        border-radius: 50px;
+        background-color: #fff;
+        max-width: 100%;
+      }
+
+      .pseudo-search input:focus {
+        box-shadow: none;
+      }
+
+      .pseudo-search button {
+        border-radius: 50px; /* 讓按鈕也是圓角 */
+      }
     </style>
   </head>
   <body>
@@ -53,10 +67,12 @@
       <!-- 搜尋功能 -->
       <div class="row mt-3">
         <div class="col-9 mx-auto">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="想去哪裡？" aria-label="searchLocation" aria-describedby="searchLocation">
-            <button class="btn btn-outline-secondary" type="button" id="searchLocation"><i class="fa-solid fa-magnifying-glass"></i></button>
-          </div>
+          <form class="pseudo-search d-flex align-items-center px-3 py-2">
+            <input type="text" class="form-control border-0 shadow-none" placeholder="想去哪裡？" aria-label="searchLocation" required>
+            <button type="submit" class="btn btn-outline-secondary ms-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
         </div>
       </div>
       <!-- 輪換圖片 -->
